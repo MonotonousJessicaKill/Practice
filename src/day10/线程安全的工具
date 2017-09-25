@@ -1,0 +1,4 @@
+线程安全和不安全的工具：
+StringBuffer---StringBuilder
+Vector---ArrayList
+HashTable---HashMap
