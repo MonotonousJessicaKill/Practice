@@ -1,8 +1,9 @@
-package jielin.wu;
+package practice;
 
 import java.util.*;
 
 public class Play {
+	
 	public static void main(String[] args) {
 //		String s1="wu";
 //		String s2="wu";
@@ -92,10 +93,29 @@ public class Play {
 //		System.out.println(stack.pop());
 //		System.out.println(stack.peek());
 		
-		
-		
-		
-		
+		StringBuilder string=new StringBuilder("testFinal");
+		//System.out.println(string.hashCode());
+		Thread t1=new Thread(
+				new Runnable() {
+					
+					@Override
+					public void run() {
+						string.append("H");
+						System.out.println(string+"new");
+						//System.out.println(string.hashCode());
+					}
+				}
+				, "newThread");
+		t1.start();
+		//string.append("H");
+		System.out.println(string);
+		try {
+			Thread.sleep(100);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println(string);
 		
 		
 		
